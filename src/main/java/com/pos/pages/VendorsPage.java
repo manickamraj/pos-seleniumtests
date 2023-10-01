@@ -16,9 +16,12 @@ public class VendorsPage  extends ProjectSpecificMethods{
 		reportStep(" Create new Vendors clicked successfully", "pass");
 	    return new NewVendorsPage();
 	}
-	public VendorsPage enterId(String id) {
+	public VendorsPage enterId(String id) throws InterruptedException {
+		Thread.sleep(3000);
+		click(locateElement(Locators.XPATH, "//input[@placeholder='Enter ID']"));
 		clearAndType(locateElement(Locators.XPATH, "//input[@placeholder='Enter ID']"), id,Keys.ENTER);
 		reportStep(id+" id entered  successfully", "pass");
+		Thread.sleep(3000);
 		return this;
 	}
 	public VendorsPage verifyCustomer(String vendorId) {

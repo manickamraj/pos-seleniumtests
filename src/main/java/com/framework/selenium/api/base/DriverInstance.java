@@ -37,16 +37,17 @@ public class DriverInstance{
 			options.addArguments("--incognito");
 		  	DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setBrowserName("chrome");
-			dc.setPlatform(Platform.WINDOWS);
+			dc.setPlatform(Platform.UNIX);
 			options.merge(dc);
 
 			remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.24.182:4444/wd/hub"), options));
+			//remoteWebdriver.set(new ChromeDriver());
 			break;
 		case "firefox":
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			DesiredCapabilities desiredCap = new DesiredCapabilities();
 			desiredCap.setBrowserName("firefox");
-			desiredCap.setPlatform(Platform.WINDOWS);
+			desiredCap.setPlatform(Platform.UNIX);
 			firefoxOptions.merge(desiredCap);
 			remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.24.182:4444/wd/hub"), firefoxOptions));
 			break;

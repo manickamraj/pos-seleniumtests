@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Suite" parallel="tests">
-	<test name="chrome" parallel="true" thread-count="2" verbose="5">
+<suite thread-count="3" name="Suite" parallel="tests">
+ 	<test name="vendortesting" verbose="5">
 	<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.pos.testcases.CreateNewVendor" />
-		<!--	<class name="com.pos.testcases.EditVendor" />
+			<class name="com.pos.testcases.CreateNewVendor" /> 
+			<class name="com.pos.testcases.EditVendor" /> 
 			<class name="com.pos.testcases.DeleteVendor" />
-			<class name="com.pos.testcases.CreateNewProduct" />
-			 <class name="com.pos.testcases.EditProduct" />
-			<class name="com.pos.testcases.DeleteProduct" /> 
-			<class name="com.pos.testcases.CreateNewCutomer" />
-			<class name="com.pos.testcases.EditCustomer" />
-			<class name="com.pos.testcases.DeleteCustomer" /> -->
 		</classes>
-	</test>
-<!--	<test name="firefox" parallel="true" thread-count="2">
+	</test> 
+	<test name="producttesting" verbose="5">
 	<parameter name="browser" value="firefox"></parameter>
 		<classes>
+			<class name="com.pos.testcases.CreateNewProduct" />
+			<class name="com.pos.testcases.EditProduct" />
+			<class name="com.pos.testcases.DeleteProduct" /> 
+		</classes>
+	</test>
+	<test name="customertesting" verbose="5">
+	<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.pos.testcases.CreateNewCutomer" />
 			<class name="com.pos.testcases.EditCustomer" />
 			<class name="com.pos.testcases.DeleteCustomer" />
-			<class name="com.pos.testcases.CreateNewVendor" />
-			<class name="com.pos.testcases.EditVendor" /> 
 		</classes>
-	</test> -->
+	</test> 
 	
 </suite> <!-- Suite -->

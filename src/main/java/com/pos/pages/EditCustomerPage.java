@@ -6,7 +6,7 @@ import com.framework.testng.api.base.ProjectSpecificMethods;
 public class EditCustomerPage extends ProjectSpecificMethods {
 
 	public EditCustomerPage changeCustomerName(String changeCustomerName) {
-		
+		locateElement(Locators.XPATH, "//input[@name='name']").clear();
 		clearAndType(locateElement(Locators.XPATH, "//input[@name='name']"), changeCustomerName);
 		reportStep(changeCustomerName+" Customer name is changed  successfully", "pass");
 		return this;

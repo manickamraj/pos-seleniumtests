@@ -25,7 +25,7 @@ public class EditCustomer extends ProjectSpecificMethods{
 		.clickCustomersMenu()
 		.enterId(customerId)
 		.clickEditIcon()
-		.changeCustomerName(customerName)
+		.changeCustomerName(customerNameChanged)
 		.clickSubmitButton()
 		.verifyEditedPopup(verifyEditPopup)
 		.clickOKButton()

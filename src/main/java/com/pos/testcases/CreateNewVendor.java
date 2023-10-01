@@ -20,7 +20,7 @@ public class CreateNewVendor extends ProjectSpecificMethods{
 	@Test(dataProvider = "fetchData")
 	public void runLogin(
 			String vendorId,String vendorName,String vendorDescription
-			,String  vendorAddress,String  vendorMobile,String  vendorEmailId) {
+			,String  vendorAddress,String  vendorMobile,String  vendorEmailId) throws InterruptedException {
 		new LoginPage()
 		.login()
 		.clickVendorsMenu()

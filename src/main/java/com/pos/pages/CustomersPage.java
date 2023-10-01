@@ -16,6 +16,7 @@ public class CustomersPage extends ProjectSpecificMethods {
 		return new NewCustomersPage();
 	}
 	public CustomersPage enterId(String id) {
+		click(locateElement(Locators.XPATH, "//input[@placeholder='Enter ID']"));
 		clearAndType(locateElement(Locators.XPATH, "//input[@placeholder='Enter ID']"), id,Keys.ENTER);
 		reportStep(id+" Customer Id is entered  successfully", "pass");
 		return this;

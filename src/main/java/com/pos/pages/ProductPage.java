@@ -16,7 +16,9 @@ public class ProductPage  extends ProjectSpecificMethods{
 		reportStep(" Create new Vendors clicked successfully", "pass");
 	    return new NewProductPage();
 	}
+	
 	public ProductPage enterId(String id) {
+		click(locateElement(Locators.XPATH, "//input[@placeholder='Enter ID']"));
 		clearAndType(locateElement(Locators.XPATH, "//input[@placeholder='Enter ID']"), id,Keys.ENTER);
 		reportStep(id+" id entered  successfully", "pass");
 		return this;

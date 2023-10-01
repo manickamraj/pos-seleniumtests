@@ -20,7 +20,7 @@ public class DeleteVendor extends ProjectSpecificMethods{
 	@Test(dataProvider = "fetchData")
 	public void runLogin(
 			String vendorId,String deletePopup,
-			String verifyDeletePopup)
+			String verifyDeletePopup) throws InterruptedException
 			 {
 		new LoginPage()
 		.login()

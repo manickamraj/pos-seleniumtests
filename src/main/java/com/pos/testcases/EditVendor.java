@@ -19,7 +19,7 @@ public class EditVendor extends ProjectSpecificMethods{
 	
 	@Test(dataProvider = "fetchData")
 	public void runLogin(String vendorId,String changeVendorName,String verifyPopup
-			,String vendorNameChanged) {
+			,String vendorNameChanged) throws InterruptedException {
 		new LoginPage()
 		.login()
 		.clickVendorsMenu()
