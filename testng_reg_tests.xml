@@ -24,6 +24,6 @@
 			<class name="com.pos.testcases.EditCustomer" />
 			<class name="com.pos.testcases.DeleteCustomer" />
 		</classes>
-	</test> 
+	</test>
 	
 </suite> <!-- Suite -->

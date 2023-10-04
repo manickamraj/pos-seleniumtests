@@ -589,7 +589,7 @@ public class SeleniumBase extends Reporter implements Browser, Element  {
 	@Override
 	public void startApp(String url, boolean headless) {
 		try {
-			setDriver("chrome", headless);
+			setDriver("chrome", headless,prop.getProperty("remote"),prop.getProperty("gridURL"));
 			setWait();
 			act = new Actions(getDriver());
 			getDriver().manage().window().maximize();
@@ -607,13 +607,13 @@ public class SeleniumBase extends Reporter implements Browser, Element  {
 		try {
 			if (browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.silentOutput", "true");
-				setDriver("chrome", headless);
+				setDriver("chrome", headless,prop.getProperty("remote"),prop.getProperty("gridURL"));
 			} else if (browser.equalsIgnoreCase("firefox")) {
-				setDriver("firefox", headless);
+				setDriver("firefox", headless,prop.getProperty("remote"),prop.getProperty("gridURL"));
 			} else if (browser.equalsIgnoreCase("ie")) {
-				setDriver("ie",false);
+				setDriver("ie",false,prop.getProperty("remote"),prop.getProperty("gridURL"));
 			}else if (browser.equalsIgnoreCase("edge")) {
-				setDriver("edge",false);
+				setDriver("edge",false,prop.getProperty("remote"),prop.getProperty("gridURL"));
 			}
 			setWait();
 			getDriver().manage().window().maximize();

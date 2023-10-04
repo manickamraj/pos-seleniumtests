@@ -21,7 +21,6 @@ public class ProjectSpecificMethods extends SeleniumBase {
 
 	@Parameters({"browser"})
 	@BeforeMethod
-	//@BeforeTest
 	public void preCondition(String browserName) {
 		if(browserName.equalsIgnoreCase("chrome")) {
 		startApp("chrome", false, prop.getProperty("url"));
@@ -33,7 +32,6 @@ public class ProjectSpecificMethods extends SeleniumBase {
 	}
 
 	@AfterMethod
-	//@AfterTest
 	public void postCondition() {
 		close();
 
